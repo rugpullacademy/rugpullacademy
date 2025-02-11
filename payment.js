@@ -91,8 +91,15 @@ function copyAddress() {
         alert("Please select a cryptocurrency first.");
         return;
     }
-    navigator.clipboard.writeText(address);
-    alert("Address copied!");
+    
+    // Remove all spaces and line breaks before copying
+    let formattedAddress = address.replace(/\s+/g, "");
+
+    navigator.clipboard.writeText(formattedAddress).then(() => {
+        alert("Address copied!");
+    }).catch(err => {
+        console.error("Failed to copy address:", err);
+    });
 }
 
 function verifyPayment() {
