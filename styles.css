@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.payment-container {
+    max-width: 400px;
+    margin: auto;
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.pricing-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #ff4d4d;
+}
+
+.sale-price {
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sale-countdown {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.crypto-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.crypto-option {
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.crypto-option:hover {
+    background: #ff4d4d; /* Red from your image */
+}
+
+.crypto-option.selected {
+    background: #ff4d4d; /* Apply red color when selected */
+    color: white;
+}
+
+.crypto-option img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.converter-box {
+    background: #1E1E1E;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.payment-address {
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.payment-address button {
+    background: #4CAF50;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirm-button {
+    background: #FFD700;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirm-button:hover {
+    background: #ffcc00;
+}
