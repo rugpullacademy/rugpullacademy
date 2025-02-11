@@ -73,7 +73,7 @@ async function updateCryptoSelection(currency) {
 }
 
 function formatWalletAddress(address) {
-    return address.match(/.{1,44}/g).join("\n"); // Splits into 44-character lines
+    return address.match(/.{1,44}/g).join("\n"); // Splits into 44-character lines for readability
 }
 
 async function selectCrypto(element) {
@@ -86,14 +86,16 @@ async function selectCrypto(element) {
 }
 
 function copyAddress() {
-    let address = document.getElementById("paymentAddress").textContent;
+    let addressElement = document.getElementById("paymentAddress");
+    let address = addressElement.textContent || addressElement.innerText;
+
     if (address.includes("Select a cryptocurrency first")) {
         alert("Please select a cryptocurrency first.");
         return;
     }
     
-    // Remove all spaces and line breaks before copying
-    let formattedAddress = address.replace(/\s+/g, "");
+    // Remove all spaces, line breaks, and hidden characters before copying
+    let formattedAddress = address.replace(/\s+/g, "").trim();
 
     navigator.clipboard.writeText(formattedAddress).then(() => {
         alert("Address copied!");
