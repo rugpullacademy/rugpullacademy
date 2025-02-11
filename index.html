@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+    <!-- Limited Time Banner -->
+    <div class="banner">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path>
+        </svg>
+        <div class="banner-text">LIMITED TIME BEFORE PRICE INCREASE.</div>
+        <a class="banner-link" href="payment.html">
+            <div class="text-white font-bold underline">JOIN NOW</div>
+        </a>
+    </div>
+
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="hero-content">
@@ -93,10 +105,29 @@
             padding: 0;
         }
 
+        /* Banner */
+        .banner {
+            background: #131b23;
+            padding: 10px;
+            font-size: 11.5px;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-rendering: optimizeLegibility;
+        }
+
+        .banner-link {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
         /* Hero Section */
         .hero-section {
             text-align: center;
-            padding: 8px 20px; /* Reduced top padding by 90% */
+            padding: 50px 20px;
             background-color: #111;
         }
 
@@ -104,7 +135,7 @@
             width: 100%;
             max-width: 600px;
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto 20px; /* Centers image and adds space below */
             border-radius: 10px;
         }
 
@@ -152,40 +183,12 @@
             color: #aaa;
         }
 
-        /* Features & Benefits */
-        .features-grid, .benefits-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .feature-card, .benefit-card {
-            background: #111;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-        }
-
-        .feature-card i, .benefit-card i {
-            font-size: 2rem;
-            color: darkred;
-            margin-bottom: 10px;
-        }
-
-        .feature-card h3, .benefit-card h3 {
-            color: #fff;
-            font-size: 1.4rem;
-        }
-
         /* Footer */
         .footer {
             background: #111;
-            padding: 15px; /* Reduced bottom spacing by 25% */
+            padding: 20px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         .footer-cta {
@@ -194,3 +197,4 @@
     </style>
 </body>
 </html>
+
