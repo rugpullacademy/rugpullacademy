@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const notifications = [
-        "Cyrus V. - From US",
-        "Jackson L. - From US",
-        "Matthias D. - From US",
-        "Thalia J. - From Canada",
-        "Leander S. - From US",
-        "Opal C. – From UK"
+        { name: "Cyrus V.", country: "the United States" },
+        { name: "Jackson L.", country: "the United States" },
+        { name: "Matthias D.", country: "the United States" },
+        { name: "Thalia J.", country: "Canada" },
+        { name: "Leander S.", country: "the United States" },
+        { name: "Opal C.", country: "the United Kingdom" },
+        { name: "Zara V.", country: "the Netherlands" }
     ];
 
     let index = 0;
@@ -21,16 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const checkmark = document.createElement("i");
         checkmark.classList.add("fas", "fa-check-circle", "checkmark");
 
-        // Add text content
+        // Create text span with glowing red effect
         const text = document.createElement("span");
-        text.textContent = notifications[index];
+        text.innerHTML = `<span class="highlight">${notifications[index].name}</span> from <span class="highlight">${notifications[index].country}</span> just joined the academy!`;
 
-        // Append checkmark and text to notification
+        // Append elements
         notification.appendChild(checkmark);
         notification.appendChild(text);
-
-        // Add to container and show
         container.appendChild(notification);
+
+        // Show notification
         setTimeout(() => notification.classList.add("show"), 100);
 
         // Remove after 3 seconds
