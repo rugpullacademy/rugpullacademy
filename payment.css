@@ -5,27 +5,32 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center; /* Center all text inside the container */
 }
 
 h1 {
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center; /* Ensure the heading is centered */
 }
 
 .pricing-header {
     font-size: 20px;
     font-weight: bold;
+    text-align: center; /* Center the pricing header */
 }
 
 .original-price {
     text-decoration: line-through;
     color: #8B0000; /* Darker red */
+    text-align: center; /* Center the original price */
 }
 
 .sale-price {
     color: white;
     font-size: 24px;
     font-weight: bold;
+    text-align: center; /* Center the sale price */
 }
 
 .sale-countdown {
@@ -33,6 +38,7 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     color: white;
+    text-align: center; /* Center the countdown text */
 }
 
 .crypto-selector {
@@ -49,6 +55,7 @@ h1 {
     margin: 5px;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center; /* Center text inside crypto options */
 }
 
 .crypto-option.selected {
@@ -70,6 +77,7 @@ h1 {
     padding: 15px;
     margin-top: 15px;
     border-radius: 10px;
+    text-align: center; /* Center text inside the converter box */
 }
 
 /* Updated spacing for conversion details */
@@ -79,7 +87,7 @@ h1 {
     align-items: center;
     margin-top: 15px;
     gap: 10px; /* Adds spacing between elements */
-    text-align: center;
+    text-align: center; /* Center text inside crypto details */
 }
 
 .crypto-amount {
@@ -146,6 +154,7 @@ h1 {
     border-radius: 5px;
     transition: background 0.3s ease;
     text-align: center;
+    width: 100%; /* Make the button full width */
 }
 
 .confirm-button:hover {
