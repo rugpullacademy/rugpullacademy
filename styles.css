@@ -117,3 +117,45 @@ h2 {
     text-align: center;
     margin-top: 40px;
 }
+
+/* Notification Container */
+.notification-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: 280px;
+    max-width: 90%;
+    z-index: 9999;
+}
+
+/* Notification Styling */
+.notification {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.3);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Show Notification */
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Checkmark Icon */
+.notification .checkmark {
+    color: darkred;
+    font-size: 18px;
+}
