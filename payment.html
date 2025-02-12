@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment - Rug Pull Academy</title>
 
     <!-- Favicon -->
@@ -11,18 +11,20 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="payment.css">
-    <script src="payment.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="payment.js" defer></script>
 </head>
 <body>
     <div class="payment-container">
         <h1>Complete Your Payment</h1>
 
+        <!-- Pricing Section -->
         <div class="pricing-header">
             <span class="original-price">$400</span>
             <span class="sale-price">$200</span>
         </div>
 
+        <!-- Countdown Timer -->
         <div class="sale-countdown">
             <p>Send your funds in by:</p>
             <span id="saleCountdown">30:00</span>
@@ -31,23 +33,23 @@
         <!-- Crypto Selector -->
         <div class="crypto-selector">
             <div class="crypto-option selected" data-currency="sol">
-                <img src="icons/Solana-Crypto-Logo-PNG-File.png" alt="Solana"> 
+                <img src="icons/Solana-Crypto-Logo-PNG-File.png" alt="Solana">
                 <span>Solana (SOL)</span>
             </div>
             <div class="crypto-option" data-currency="btc">
-                <img src="icons/Bitcoin-Logo-PNG-Picture.png" alt="Bitcoin"> 
+                <img src="icons/Bitcoin-Logo-PNG-Picture.png" alt="Bitcoin">
                 <span>Bitcoin (BTC)</span>
             </div>
             <div class="crypto-option" data-currency="eth">
-                <img src="icons/R.png" alt="Ethereum"> 
+                <img src="icons/R.png" alt="Ethereum">
                 <span>Ethereum (ETH)</span>
             </div>
             <div class="crypto-option" data-currency="usdt">
-                <img src="icons/Tether-usdt-logo.png" alt="USDT"> 
+                <img src="icons/Tether-usdt-logo.png" alt="USDT">
                 <span>USDT (ERC20)</span>
             </div>
             <div class="crypto-option" data-currency="xmr">
-                <img src="icons/monero-logo-png-transparent.png" alt="Monero"> 
+                <img src="icons/monero-logo-png-transparent.png" alt="Monero">
                 <span>Monero (XMR)</span>
             </div>
         </div>
@@ -66,22 +68,89 @@
                 </div>
             </div>
 
-            <!-- Payment Address -->
+            <!-- Payment Address and QR Code -->
             <div class="payment-address">
                 <p>Send to:</p>
                 <span id="paymentAddress">Loading...</span>
                 <button onclick="copyAddress()">Copy Address</button>
+                <div id="qrCode"></div>
             </div>
         </div>
 
+        <!-- Price Valid Timer -->
         <div class="time-left">
             Price valid for: <span id="priceValidTimer">30:00</span>
         </div>
 
+        <!-- Warning Text -->
         <p class="warning-text">Transactions sent To/From smart contracts are not accepted.</p>
 
         <!-- Confirmation Button -->
         <button class="confirm-button" onclick="verifyPayment()">Payment Completed</button>
+
+        <!-- Trust Indicators -->
+        <div class="trust-section">
+            <div class="trust-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Payment</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-users"></i>
+                <span>500+ Happy Customers</span>
+            </div>
+        </div>
     </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h2>Payment Confirmed!</h2>
+            <p>Thank you for your payment. Redirecting to Discord...</p>
+        </div>
+    </div>
+
+    <!-- Script for Dynamic Features -->
+    <script>
+        // Countdown Timer
+        let countdown = 1800; // 30 minutes in seconds
+        const timer = setInterval(() => {
+            const minutes = Math.floor(countdown / 60);
+            const seconds = countdown % 60;
+            document.getElementById('saleCountdown').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('priceValidTimer').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            if (countdown <= 0) clearInterval(timer);
+            countdown--;
+        }, 1000);
+
+        // Copy Address Function
+        function copyAddress() {
+            const address = document.getElementById('paymentAddress').textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Address copied to clipboard!');
+            });
+        }
+
+        // Verify Payment Function
+        function verifyPayment() {
+            const modal = document.getElementById('confirmationModal');
+            modal.style.display = 'block';
+
+            // Redirect to Discord after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'https://discord.gg/VBtdd4FMfq';
+            }, 3000);
+        }
+
+        // Generate QR Code
+        function generateQRCode(address) {
+            const qrCodeElement = document.getElementById('qrCode');
+            qrCodeElement.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${address}" alt="QR Code">`;
+        }
+
+        // Example: Set Payment Address and Generate QR Code
+        const paymentAddress = 'YourPaymentAddressHere';
+        document.getElementById('paymentAddress').textContent = paymentAddress;
+        generateQRCode(paymentAddress);
+    </script>
 </body>
 </html>
