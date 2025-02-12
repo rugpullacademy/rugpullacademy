@@ -160,9 +160,8 @@ h2 {
     font-size: 18px;
 }
 
-/* Highlighted Name & Country */
+/* Highlighted Text */
 .notification .highlight {
     color: darkred;
     font-weight: bold;
-    text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.7);
 }
