@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment - Rug Pull Academy</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="IMG_4249.ico">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="payment.css">
     <script src="payment.js" defer></script>
@@ -12,7 +17,7 @@
 <body>
     <div class="payment-container">
         <h1>Complete Your Payment</h1>
-        
+
         <div class="pricing-header">
             <span class="original-price">$400</span>
             <span class="sale-price">$200</span>
@@ -23,24 +28,31 @@
             <span id="saleCountdown">30:00</span>
         </div>
 
+        <!-- Crypto Selector -->
         <div class="crypto-selector">
             <div class="crypto-option selected" data-currency="sol">
-                <img src="icons/Solana-Crypto-Logo-PNG-File.png" alt="Solana"> <span>Solana (SOL)</span>
+                <img src="icons/Solana-Crypto-Logo-PNG-File.png" alt="Solana"> 
+                <span>Solana (SOL)</span>
             </div>
             <div class="crypto-option" data-currency="btc">
-                <img src="icons/Bitcoin-Logo-PNG-Picture.png" alt="Bitcoin"> <span>Bitcoin (BTC)</span>
+                <img src="icons/Bitcoin-Logo-PNG-Picture.png" alt="Bitcoin"> 
+                <span>Bitcoin (BTC)</span>
             </div>
             <div class="crypto-option" data-currency="eth">
-                <img src="icons/R.png" alt="Ethereum"> <span>Ethereum (ETH)</span>
+                <img src="icons/R.png" alt="Ethereum"> 
+                <span>Ethereum (ETH)</span>
             </div>
             <div class="crypto-option" data-currency="usdt">
-                <img src="icons/Tether-usdt-logo.png" alt="USDT"> <span>USDT (ERC20)</span>
+                <img src="icons/Tether-usdt-logo.png" alt="USDT"> 
+                <span>USDT (ERC20)</span>
             </div>
             <div class="crypto-option" data-currency="xmr">
-                <img src="icons/monero-logo-png-transparent.png" alt="Monero"> <span>Monero (XMR)</span>
+                <img src="icons/monero-logo-png-transparent.png" alt="Monero"> 
+                <span>Monero (XMR)</span>
             </div>
         </div>
 
+        <!-- Conversion Details -->
         <div class="converter-box">
             <div class="crypto-details">
                 <div class="crypto-amount">
@@ -49,11 +61,12 @@
                 <div class="crypto-usd">
                     <span class="sale-price">$200.00 USD</span>
                 </div>
-                <div class="rate-info" style="margin-top: 15px; margin-bottom: 15px;">
+                <div class="rate-info">
                     <span id="rateInfo">@ $0.00 per coin</span>
                 </div>
             </div>
 
+            <!-- Payment Address -->
             <div class="payment-address">
                 <p>Send to:</p>
                 <span id="paymentAddress">Loading...</span>
@@ -61,12 +74,13 @@
             </div>
         </div>
 
-        <div class="time-left" style="margin-top: 20px;">
+        <div class="time-left">
             Price valid for: <span id="priceValidTimer">30:00</span>
         </div>
 
         <p class="warning-text">Transactions sent To/From smart contracts are not accepted.</p>
 
+        <!-- Confirmation Button -->
         <button class="confirm-button" onclick="verifyPayment()">Payment Completed</button>
     </div>
 </body>
