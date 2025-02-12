@@ -9,47 +9,51 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .payment-container {
-    max-width: 500px;
+    max-width: 90%;
+    width: 100%;
     background: #2a2a2a;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
+    margin: 20px;
 }
 
 h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #ff6b6b;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #8B0000; /* Dark red */
 }
 
 .pricing-header {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
 .original-price {
     text-decoration: line-through;
-    color: #8b0000;
+    color: #8B0000; /* Dark red */
     margin-right: 10px;
 }
 
 .sale-price {
-    color: #4caf50;
-    font-size: 28px;
+    color: #8B0000; /* Dark red */
+    font-size: 24px;
     font-weight: bold;
 }
 
 .sale-countdown {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
 .crypto-selector {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
@@ -57,18 +61,21 @@ h1 {
 
 .crypto-option {
     background: #3a3a3a;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
+    flex: 1 1 calc(50% - 20px); /* Two columns on mobile */
+    max-width: calc(50% - 20px);
+    text-align: center;
 }
 
 .crypto-option.selected {
-    background: #8b0000;
+    background: #8B0000; /* Dark red */
 }
 
 .crypto-option:hover {
-    background: #6a0000;
+    background: #6a0000; /* Slightly lighter dark red */
 }
 
 .crypto-option img {
@@ -78,7 +85,7 @@ h1 {
 
 .converter-box {
     background: #3a3a3a;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -88,7 +95,7 @@ h1 {
 }
 
 .crypto-amount {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -110,17 +117,18 @@ h1 {
 }
 
 .payment-address button {
-    background: #8b0000;
+    background: #8B0000; /* Dark red */
     border: none;
     padding: 10px 20px;
     color: white;
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s;
+    width: 100%;
 }
 
 .payment-address button:hover {
-    background: #6a0000;
+    background: #6a0000; /* Slightly lighter dark red */
 }
 
 .time-left {
@@ -130,16 +138,16 @@ h1 {
 
 .warning-text {
     font-size: 14px;
-    color: #ff6b6b;
+    color: #8B0000; /* Dark red */
     margin-bottom: 20px;
 }
 
 .confirm-button {
-    background: #8b0000;
+    background: #8B0000; /* Dark red */
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 15px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
@@ -148,5 +156,37 @@ h1 {
 }
 
 .confirm-button:hover {
-    background: #6a0000;
+    background: #6a0000; /* Slightly lighter dark red */
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    .crypto-option {
+        flex: 1 1 100%; /* One column on smaller screens */
+        max-width: 100%;
+    }
+
+    .payment-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .sale-price {
+        font-size: 20px;
+    }
+
+    .crypto-amount {
+        font-size: 18px;
+    }
+
+    .crypto-usd {
+        font-size: 16px;
+    }
+
+    .rate-info {
+        font-size: 12px;
+    }
 }
