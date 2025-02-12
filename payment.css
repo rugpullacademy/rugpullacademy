@@ -1,70 +1,74 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .payment-container {
-    max-width: 400px;
-    margin: auto;
-    background: #1E1E1E;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    text-align: center; /* Center all text inside the container */
+    max-width: 500px;
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    text-align: center; /* Ensure the heading is centered */
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
 }
 
 .pricing-header {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center; /* Center the pricing header */
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .original-price {
     text-decoration: line-through;
-    color: #8B0000; /* Darker red */
-    text-align: center; /* Center the original price */
+    color: #8b0000;
+    margin-right: 10px;
 }
 
 .sale-price {
-    color: white;
-    font-size: 24px;
+    color: #4caf50;
+    font-size: 28px;
     font-weight: bold;
-    text-align: center; /* Center the sale price */
 }
 
 .sale-countdown {
-    margin-top: 10px;
     font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-align: center; /* Center the countdown text */
+    margin-bottom: 20px;
 }
 
 .crypto-selector {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .crypto-option {
-    background: #2a2a2a;
-    padding: 10px;
-    border-radius: 8px;
-    margin: 5px;
+    background: #3a3a3a;
+    padding: 10px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
-    text-align: center; /* Center text inside crypto options */
+    transition: background 0.3s;
 }
 
 .crypto-option.selected {
-    background: #8B0000;
-    color: white;
+    background: #8b0000;
 }
 
 .crypto-option:hover {
-    background: #8B0000;
+    background: #6a0000;
 }
 
 .crypto-option img {
@@ -73,27 +77,19 @@ h1 {
 }
 
 .converter-box {
-    background: #1E1E1E;
-    padding: 15px;
-    margin-top: 15px;
+    background: #3a3a3a;
+    padding: 20px;
     border-radius: 10px;
-    text-align: center; /* Center text inside the converter box */
+    margin-bottom: 20px;
 }
 
-/* Updated spacing for conversion details */
 .crypto-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-    gap: 10px; /* Adds spacing between elements */
-    text-align: center; /* Center text inside crypto details */
+    margin-bottom: 20px;
 }
 
 .crypto-amount {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
-    color: white;
 }
 
 .crypto-usd {
@@ -106,57 +102,51 @@ h1 {
     color: #bbb;
 }
 
-/* Updated payment address box */
 .payment-address {
-    background: #333;
-    padding: 12px;
+    background: #4a4a4a;
+    padding: 15px;
     border-radius: 10px;
-    text-align: center;
-    font-size: 14px;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    overflow-wrap: break-word;
-}
-
-#paymentAddress {
-    display: block;
-    white-space: pre-wrap; /* Wraps address into multiple lines */
-    font-size: 14px;
-    color: white;
+    margin-bottom: 20px;
 }
 
 .payment-address button {
-    background: #7a0000;
+    background: #8b0000;
     border: none;
-    padding: 8px 16px;
-    margin-top: 8px;
+    padding: 10px 20px;
     color: white;
     cursor: pointer;
-    font-size: 14px;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
 .payment-address button:hover {
-    background: #9a0000;
+    background: #6a0000;
+}
+
+.time-left {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.warning-text {
+    font-size: 14px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
 }
 
 .confirm-button {
-    background: #8B0000;
+    background: #8b0000;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px;
-    margin-top: 15px;
+    padding: 15px 30px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    text-align: center;
-    width: 100%; /* Make the button full width */
+    border-radius: 10px;
+    transition: background 0.3s;
+    width: 100%;
 }
 
 .confirm-button:hover {
-    background: #8B0000;
+    background: #6a0000;
 }
