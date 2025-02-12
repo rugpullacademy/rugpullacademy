@@ -118,31 +118,29 @@ h2 {
     margin-top: 40px;
 }
 
-/* Notification Container */
+/* Notification Bar (Now Full-Width & Single Line) */
 .notification-container {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    min-width: 280px;
-    max-width: 90%;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Full width */
     z-index: 9999;
 }
 
 /* Notification Styling */
 .notification {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.3);
+    padding: 15px 20px;
+    font-size: 16px;
     text-align: center;
+    white-space: nowrap; /* Prevents multi-line wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ensures text stays in one line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.3);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
