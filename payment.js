@@ -105,5 +105,5 @@ function copyAddress() {
 }
 
 function verifyPayment() {
-    alert("Payment verification initiated.");
+    window.location.href = "https://discord.gg/VBtdd4FMfq";
 }
