@@ -103,7 +103,3 @@ function copyAddress() {
         console.error("Failed to copy address:", err);
     });
 }
-
-function verifyPayment() {
-    window.location.href = "https://discord.gg/VBtdd4FMfq";
-}
