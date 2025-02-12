@@ -1,4 +1,3 @@
-/* General Styles for Payment Page */
 .payment-container {
     max-width: 400px;
     margin: auto;
@@ -9,27 +8,6 @@
     text-align: center; /* Center all text inside the container */
 }
 
-/* Checkout Header */
-.checkout-header {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-top: 20px;
-}
-
-.checkout-logo {
-    width: 100px; /* Adjust as needed */
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.checkout-title {
-    font-size: 26px;
-    font-weight: bold;
-    color: darkred;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
-}
-
-/* Payment Section */
 h1 {
     font-size: 24px;
     margin-bottom: 15px;
@@ -63,7 +41,6 @@ h1 {
     text-align: center; /* Center the countdown text */
 }
 
-/* Crypto Selector */
 .crypto-selector {
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +72,6 @@ h1 {
     vertical-align: middle;
 }
 
-/* Converter Box */
 .converter-box {
     background: #1E1E1E;
     padding: 15px;
@@ -104,7 +80,7 @@ h1 {
     text-align: center; /* Center text inside the converter box */
 }
 
-/* Crypto Details */
+/* Updated spacing for conversion details */
 .crypto-details {
     display: flex;
     flex-direction: column;
@@ -130,7 +106,7 @@ h1 {
     color: #bbb;
 }
 
-/* Payment Address Box */
+/* Updated payment address box */
 .payment-address {
     background: #333;
     padding: 12px;
@@ -166,7 +142,6 @@ h1 {
     background: #9a0000;
 }
 
-/* Confirm Button */
 .confirm-button {
     background: #8B0000;
     color: white;
@@ -183,24 +158,5 @@ h1 {
 }
 
 .confirm-button:hover {
-    background: #9a0000;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-    .checkout-title {
-        font-size: 22px;
-    }
-
-    .checkout-logo {
-        width: 80px; /* Adjust logo size for small screens */
-    }
-
-    .crypto-option {
-        padding: 8px;
-    }
-
-    .confirm-button {
-        font-size: 16px;
-    }
+    background: #8B0000;
 }
