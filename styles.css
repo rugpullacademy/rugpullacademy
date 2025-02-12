@@ -5,6 +5,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Limited Time Banner */
@@ -131,12 +132,14 @@ h2 {
 .notification {
     background: rgba(0, 0, 0, 0.9);
     color: white;
-    padding: 15px 20px;
-    font-size: 16px;
+    padding: 12px 20px;
+    font-size: 14px; /* Adjusted for better fit */
     text-align: center;
-    white-space: nowrap; /* Prevents multi-line wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Ensures text stays in one line */
+    white-space: nowrap; /* Ensures text stays on one line */
+    overflow: hidden; /* Prevents content from overflowing */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    max-width: 95vw; /* Prevents it from going off-screen */
+    min-width: 200px; /* Ensures it's not too small */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,11 +158,21 @@ h2 {
 /* Checkmark Icon */
 .notification .checkmark {
     color: darkred;
-    font-size: 18px;
+    font-size: 16px;
+    margin-right: 8px; /* Adds spacing */
 }
 
 /* Highlighted Text */
 .notification .highlight {
     color: darkred;
     font-weight: bold;
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+    .notification {
+        font-size: 12px; /* Adjusted for smaller screens */
+        padding: 10px 15px;
+        max-width: 90vw;
+    }
 }
