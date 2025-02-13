@@ -73,7 +73,8 @@ async function updateCryptoSelection(currency) {
 }
 
 function formatWalletAddress(address) {
-    return address.match(/.{1,44}/g).join("\n"); // Splits into 44-character lines for readability
+    // Split into 44-character lines without spaces
+    return address.match(/.{1,44}/g).join("\n");
 }
 
 async function selectCrypto(element) {
